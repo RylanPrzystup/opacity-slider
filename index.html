@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Opacity Controller</title>
+</head>
+<body>
+    <label for="opacitySlider">Adjust Opacity</label>
+    <input type="range" id="opacitySlider" min="0" max="1" step="0.01" value="1" oninput="changeOpacity()">
+    <br>
+    <img src="alefukugava-cat-6089697.jpg" alt="placeholder image" style="width: 400px; height: 300px;">
+
+    <script>
+        function changeOpacity() {
+            const slider = document.getElementById('opacitySlider');
+            const image = document.querySelector('img');
+            image.style.opacity = slider.value;
+        }
+    </script>
+</body>
+</html>
